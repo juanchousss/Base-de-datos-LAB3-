@@ -48,7 +48,7 @@ func (r *UserRepository) GetUserByEmail(email string) (*models.User, error) {
 	var user models.User
 	var hash string
 
-	// Fíjate que ya estamos usando el "created_at" que arreglamos en la base de datos
+	// Created_at
 	query := `
 		SELECT id_user, username, email, password_hash, created_at 
 		FROM users 
